@@ -48,14 +48,15 @@ export default {
   height: 316.47px;
   justify-self:last baseline;
 }
-/* .container::before{
-  position: absolute;
-  width: 100%;
-  height: 50vh;
   
-  content: "";
-  z-index: -1;
-} */
+.container_logo {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  width: 736px;
+  height: 263px;
+  right: 38px;
+}
 
 .container_logo {
   padding: 4rem;

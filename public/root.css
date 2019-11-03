@@ -1,0 +1,14 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, 
+html, 
+input, input::before, input::after,
+button, button::before, button::after,
+label, label::before, label::after,
+p, p::before, p::after,
+div, div::before, div::after,
+section, section::before, section::after {
+  font-family: 'Roboto', sans-serif;
+}

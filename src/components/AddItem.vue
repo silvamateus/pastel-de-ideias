@@ -24,3 +24,32 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'addItem',
+
+    methods: {
+      onCLick(title, taste, value) {
+        this.$store.commit('addFood', {title, taste, value})
+      },
+      uploadImage(event) {
+        const image = event.target.files[0]
+        const reader = new FileReader()
+        reader.readAsDataURL(image)
+        reader.onload = ev => {
+          alert(ev.target.result)
+          // this.image = e.target.files[0]
+  }
+      }
+    },
+    data() {
+      return{
+        title: '',
+        taste: '',
+        value: '',
+        image: {}
+      }
+    }
+  }
+</script>

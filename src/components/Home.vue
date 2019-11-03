@@ -58,7 +58,8 @@ export default {
   right: 38px;
 }
 
-.container_logo {
-  padding: 4rem;
+img {
+  width: 694px;
+  height: auto;
 }
 </style>

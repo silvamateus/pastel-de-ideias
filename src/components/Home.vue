@@ -35,12 +35,13 @@ export default {
 }
 .container {
   display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 60vh;
   background-image: url('../assets/wave.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
 }
 .container_pasteis {
   width: 392.53px;

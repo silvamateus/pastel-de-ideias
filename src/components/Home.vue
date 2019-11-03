@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="gradient">
     <section class='container'>
-        <img :src="logo" class='container_logo' />
+        <div class='container_logo'><img :src="logo"  /></div>
+        <add-item />
     </section>
   </div>
 </template>
@@ -9,12 +10,16 @@
 <script>
 import logo from '../assets/Logo.svg';
 import pasteis from '../assets/pasteis-img.png';
+import AddItem from './AddItem.vue'
 export default {
   name: 'home',
+  components: {
+    AddItem
+  },
   data() {
     return {
-      logo: logo,
-      pasteis: pasteis
+      logo,
+      pasteis
     }
   }
 }

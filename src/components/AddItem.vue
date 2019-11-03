@@ -40,7 +40,7 @@
         reader.onload = ev => {
           alert(ev.target.result)
           // this.image = e.target.files[0]
-  }
+        }
       }
     },
     data() {
@@ -53,3 +53,133 @@
     }
   }
 </script>
+
+<style lang="css" scoped>
+input, textarea, .block, .block_form_file {
+  border-radius: .5rem;
+}
+input[type='file'] {
+  display: none
+}
+.image-upload {
+  font-size: 4.5rem;
+  color: #E43636;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+}
+.wrapper::before {
+  position: absolute;
+  background-image: url('../assets/pasteis-img.png');
+  width: 393px;
+  height: 316px;
+  top: -150px;
+  left: 800px;
+  content: '';
+}
+.wrapper::after {
+  position: absolute;
+  background-image: url('../assets/pastel-paralax.png');
+  top: -350px;
+  left: -330px;
+  width: 555px;
+  height: 555px;
+  content: '';
+}
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 30px #740B0B45;
+}
+
+
+.block_header {
+  background-color: #FFCA00;
+  width: auto;
+  padding: .5rem 0;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  color: #A03400;
+  font-size: 29px;
+  font-weight: bolder;
+  font-style: italic;
+}
+.block_header > p {
+  padding-left: 3rem;
+}
+
+.block_form {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  margin-top: -3rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+input, textarea, .block_form_file {
+  width: 33%;
+  border: 1px solid #E43636;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  color: #a03400;
+}
+.form_header input {
+  width: 39%;
+}
+.form_header input:nth-child(3) {
+  width: 20%;
+}
+.block_form_input--size-big {
+  width: 100%;
+  height: 5rem;
+  resize: none;
+}
+.block_form_file {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: auto;
+  cursor: pointer;
+}
+.block_form_buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -3.5rem;
+}
+
+.block_form_buttons button {
+  border: 0;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 1.5rem;
+}
+
+.clear, .register {
+  color: #FFFFFF;
+  font-weight: bolder;
+}
+
+.clear {
+  background-color: #E43636;
+  margin-right: 1rem;
+}
+.register {
+  background-color: #FFCA00;
+  color: #A03400;
+  margin-left: 1rem;
+}
+</style>

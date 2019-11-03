@@ -34,7 +34,7 @@
   height: 5px;
   border-bottom: 1px solid #E43636;
   top: 0;
-  width:100%;
+  width:calc(100vw/3 - 1.8rem);
 }
 .items_lines span::before {
   right: 100%;

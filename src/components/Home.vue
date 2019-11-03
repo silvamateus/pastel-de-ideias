@@ -26,6 +26,13 @@ export default {
 </script>
 
 <style scoped>
+.gradient{
+  position: relative;
+  min-height: 85vh;
+  width: 100vw;
+  content: "";
+  background:linear-gradient(to right, transparent, #FFFFFF, transparent);
+}
 .container {
   display: flex;
   flex-direction: column;

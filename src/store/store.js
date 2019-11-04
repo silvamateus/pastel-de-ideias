@@ -10,10 +10,10 @@ export const store = new Vuex.Store({
   },
   mutations: {
     addFood(state, food) {
-      state.food + [...state.food, food]
+      state.food.push(food)
     },
     addDrink(state, drink) {
-      state.drink + [...state.drink, drink]
+      state.drink.push(drink)
     }
   },
   getters: {

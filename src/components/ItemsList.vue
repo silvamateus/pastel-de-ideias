@@ -68,5 +68,12 @@
   left: 100%;
   margin-left: 5rem;
 }
+.items_card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  padding: 3rem 0;
+}
 
 </style>

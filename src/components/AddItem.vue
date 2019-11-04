@@ -47,17 +47,16 @@
         const reader = new FileReader()
         reader.readAsDataURL(image)
         reader.onload = ev => {
-          alert(ev.target.result)
-          // this.image = e.target.files[0]
+          this.image = ev.target.files[0]
         }
       }
     },
     data() {
       return{
         title: '',
-        taste: '',
+        flavor: '',
         value: '',
-        image: {}
+        image: ''
       }
     }
   }

@@ -63,8 +63,11 @@
 </script>
 
 <style lang="css" scoped>
-input, textarea, .block, .block_form_file {
+input, textarea {
   border-radius: .5rem;
+}
+.block, .block_form_file {
+  border-radius: 1rem;
 }
 input[type='file'] {
   display: none

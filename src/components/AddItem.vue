@@ -92,6 +92,7 @@ input[type='file'] {
   font-size: 4.5rem;
   color: #E43636;
 }
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -126,15 +127,19 @@ input[type='file'] {
 
 
 .block_header {
+  display: flex;
+  flex-wrap: nowrap;
   background-color: #FFCA00;
-  width: auto;
-  padding: .5rem 0;
+  width: 100%;
+  padding: .8rem 0;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   color: #A03400;
   font-size: 24px;
   font-weight: bolder;
   font-style: italic;
+  justify-content: space-between;
+  align-items: center;
 }
 .block_header > p {
   padding-left: 3.5rem;

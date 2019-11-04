@@ -32,7 +32,12 @@
 <style scoped>
 .items {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:linear-gradient(to right, transparent, #FFFFFF, transparent);
+  padding: 1rem 0;
 }
 .items_lines {
   position: relative;

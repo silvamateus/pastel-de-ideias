@@ -75,5 +75,18 @@
   max-width: 1180px;
   padding: 3rem 0;
 }
+.items_card_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+}
+.items_card_wrapper img {
+  position: relative;
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  margin-right: -100px;
+}
 
 </style>

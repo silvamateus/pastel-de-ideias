@@ -36,6 +36,12 @@
         const image = this.image? this.image : defaultIMG
         this.$store.commit('addFood', {title, flavor, value, description, image})
       },
+      onClear(){
+        this.title=''
+        this.flavor=''
+        this.value=''
+        this.image=''
+      },
       uploadImage(event) {
         const image = event.target.files[0]
         const reader = new FileReader()

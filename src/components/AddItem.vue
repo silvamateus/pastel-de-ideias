@@ -26,19 +26,22 @@
 </template>
 
 <script>
-  import defaultIMG from '../assets/default.png'
+  import pastelzinhoDefault from '../assets/pastelzinho.png'
+  import suquinhoDefault from '../assets/suquinho.png'
   export default {
     name: 'addItem',
 
     methods: {
       onSubmit() {
-        const {title, flavor, value, description} = this
-        const image = this.image? this.image : defaultIMG
-        this.$store.commit('addFood', {title, flavor, value, description, image})
+        const {title, flavor, value, description, consumable} = this
+        const defaultImage = consumable === 'Food'? pastelzinhoDefault : suquinhoDefault
+        const image = this.image? this.image : defaultImage
+        this.$store.commit(`add${consumable}`, {title, flavor, value, description, image})
       },
       onClear(){
         this.title=''
         this.flavor=''
+        this.description = ''
         this.value=''
         this.image=''
       },
@@ -55,8 +58,11 @@
       return{
         title: '',
         flavor: '',
+        description: '',
         value: '',
-        image: ''
+        image: '',
+        isChecked: false,
+        consumable: 'Food'
       }
     }
   }

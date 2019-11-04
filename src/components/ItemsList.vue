@@ -88,5 +88,12 @@
   object-fit: cover;
   margin-right: -100px;
 }
+.items_card_block{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 0px 30px #740B0B45;
+  border-radius: 1rem;
+}
 
 </style>

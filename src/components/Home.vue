@@ -30,7 +30,6 @@ export default {
   position: relative;
   min-height: 85vh;
   width: 100vw;
-  content: "";
   background:linear-gradient(to right, transparent, #FFFFFF, transparent);
 }
 .container {

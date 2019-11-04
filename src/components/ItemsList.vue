@@ -118,5 +118,17 @@
   color: #FFFFFF;
   font-style: oblique;
 }
+.items_card_body {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem 10rem;
+  font-size: 24px;
+  color: #A03400;
+}
 
 </style>

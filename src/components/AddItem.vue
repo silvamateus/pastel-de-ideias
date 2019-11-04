@@ -3,6 +3,10 @@
   <div class="block">
       <div class="block_header">
         <p>Monte aqui o seu cardápio. O que está esperando?</p>
+        <div class="toogle-type">
+          <input type="checkbox" id="toogle" class="checkbox" v-model="isChecked"/>
+          <label for="toogle" class="switch"/>
+        </div>
       </div>
       <form class="block_form" v-on:submit.prevent="onSubmit" >
         <div class="form_header">
@@ -52,6 +56,12 @@
         reader.onload = ev => {
           this.image = ev.target.files[0]
         }
+      }
+    },
+    watch: {
+      isChecked(val) {
+        this.consumable =  val? 'Drink' : 'Food'
+        this.$store.commit('whichConsumable', this.consumable)
       }
     },
     data() {
@@ -127,9 +137,57 @@ input[type='file'] {
   font-style: italic;
 }
 .block_header > p {
-  padding-left: 3rem;
+  padding-left: 3.5rem;
+}
+.block_header .switch {
+  margin-right: 1rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 12px;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  z-index: 5;
+  cursor: pointer;
+}
+.checkbox {
+  display: none;
+}
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #E43636;
+  top: -3px;
+  left: 0;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
+.checkbox:checked +.switch::after {
+  transform: translateX(25px);
+}
+.toogle-type{
+  margin-right: 2.5rem;
+}
+.toogle-type::before, .toogle-type::after {
+  position: relative;
+  color: #A03400;
+  font-size: 16px;
+  font-style: normal;
+}
+.toogle-type::before{
+  content: 'Comida';
+  padding-right: 1rem;
+}
+.toogle-type::after {
+  content: 'Bebida';
+  
+}
 .block_form {
   position: relative;
   width: 100%;
@@ -137,7 +195,6 @@ input[type='file'] {
   margin-top: -3.3rem;
   display: flex;
   flex-direction: column;
-
 }
 
 .form_header {

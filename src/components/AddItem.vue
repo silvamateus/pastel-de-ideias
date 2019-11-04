@@ -15,7 +15,7 @@
           <i class="far fa-image image-upload"></i>
           <p>Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar a pasta</p>
         </label>
-        <input type="file" id="img-upload" accept="image/*" @change="uploadImage($event)"/>
+        <input type="file" id="img-upload" accept="image/jpg, image/png" @change="uploadImage($event)"/>
         <div class="block_form_buttons">
           <button class="clear" @click="onClear()">LIMPAR</button>
           <button class="register" type="submit">CADASTRAR</button>
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+  import defaultIMG from '../assets/default.png'
   export default {
     name: 'addItem',
 

@@ -1,11 +1,11 @@
 <template>
   <div class="items">
     <p class="items_lines"><span>Veja como será apresentado ao cliente</span></p>
-    <div v-if="foods" class="items_card">
-      <div v-for="(food, index) in foods" v-bind:key="index" class="items_card_wrapper">
+    <div v-if="itersableConsumable" class="items_card">
+      <div v-for="(food, index) in itersableConsumable" v-bind:key="index" class="items_card_wrapper">
         <div class="items_card_block">
           <div class="items_card_header">
-            <p>"{{food.title}}"</p>
+            <p>"{{food.title | capitalize}}"</p>
             <p class="items_card_header--money">R${{food.value}}</p>
           </div>
           <div class="items_card_body">
@@ -24,8 +24,17 @@
   export default {
     name: 'itemsList',
     computed: mapState({
-        foods: state => state.food
-      })
+        itersableConsumable: state => state[state.consumable.toLowerCase()],
+        drinks: state => state. drink,
+        consumable: state => state.consumable
+      }),
+    filters: {
+      capitalize: function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      }
+    }
   }
 </script>
 
@@ -71,6 +80,7 @@
 .items_card {
   position: relative;
   display: flex;
+  flex-direction: column-reverse;
   width: 100%;
   max-width: 1180px;
   padding: 3rem 0;
@@ -80,6 +90,7 @@
   flex-direction: row-reverse;
   align-items: center;
   width: 100%;
+  padding-bottom: 2rem;
 }
 .items_card_wrapper img {
   position: relative;
@@ -117,6 +128,7 @@
 .items_card_header--money {
   color: #FFFFFF;
   font-style: oblique;
+  font-size: 26px;
 }
 .items_card_body {
   display: flex;
@@ -129,6 +141,7 @@
   padding: 1rem 10rem;
   font-size: 24px;
   color: #A03400;
+  padding-bottom: 1rem;
 }
 .items_card_body p {
   line-height: 3rem;

@@ -20,8 +20,12 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
   export default {
-    
+    name: 'itemsList',
+    computed: mapState({
+        foods: state => state.food
+      })
   }
 </script>
 

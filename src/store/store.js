@@ -6,7 +6,8 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     food: [],
-    drink: []
+    drink: [],
+    consumable: 'Food'
   },
   mutations: {
     addFood(state, food) {
@@ -14,10 +15,14 @@ export const store = new Vuex.Store({
     },
     addDrink(state, drink) {
       state.drink.push(drink)
+    },
+    whichConsumable(state, consumable) {
+      state.consumable = consumable
     }
   },
   getters: {
     food: state => state.food,
-    drink: state => state.drink
+    drink: state => state.drink,
+    consumable: state => state.consumable
   }
 })

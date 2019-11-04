@@ -149,7 +149,6 @@
 }
 .items_card_body p span {
   font-weight: bold;
-  
 }
 
 </style>

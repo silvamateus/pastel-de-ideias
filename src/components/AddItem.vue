@@ -6,9 +6,9 @@
       </div>
       <form class="block_form" v-on:submit.prevent="onSubmit" >
         <div class="form_header">
-          <input v-model="title" type="text" placeholder="Título do pedido"/>
-          <input v-model="taste" type="text" placeholder="Sabor"/>
-          <input v-model="value" type="text" placeholder="R$"/>
+          <input v-model="title" type="text" pattern=".{3,60}" placeholder="Título do pedido" required/>
+          <input v-model="flavor" type="text" pattern=".{3,60}" placeholder="Sabor" required/>
+          <input v-model="value" type="number" placeholder="R$" required/>
         </div>
         <textarea v-model="description" placeholder="Descrição" class="block_form_input--size-big"/>
         <label class="block_form_file block_form_input--size-big" for="img-upload">

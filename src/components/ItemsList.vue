@@ -1,6 +1,21 @@
 <template>
   <div class="items">
     <p class="items_lines"><span>Veja como será apresentado ao cliente</span></p>
+    <div v-if="foods" class="items_card">
+      <div v-for="(food, index) in foods" v-bind:key="index" class="items_card_wrapper">
+        <div class="items_card_block">
+          <div class="items_card_header">
+            <p>"{{food.title}}"</p>
+            <p class="items_card_header--money">R${{food.value}}</p>
+          </div>
+          <div class="items_card_body">
+            <p><span>Sabor:</span> {{food.flavor}}</p>
+            <p><span>Descrição:</span> {{food.description}}</p>
+          </div>
+        </div>
+        <img :src="food.image" alt="foto de alimento">
+      </div>
+    </div>
   </div>
 </template>
 

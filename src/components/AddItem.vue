@@ -113,10 +113,10 @@ input[type='file'] {
   background-color: #FFCA00;
   width: auto;
   padding: .5rem 0;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   color: #A03400;
-  font-size: 29px;
+  font-size: 24px;
   font-weight: bolder;
   font-style: italic;
 }

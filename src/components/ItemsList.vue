@@ -107,5 +107,16 @@
   font-size: 30px;
   font-weight: bold;
 }
+.items_card_header::first-letter {
+  text-transform: capitalize;
+}
+.items_card_header p {
+  line-height: 3rem;
+  margin: 0;
+}
+.items_card_header--money {
+  color: #FFFFFF;
+  font-style: oblique;
+}
 
 </style>

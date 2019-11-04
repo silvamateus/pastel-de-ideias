@@ -95,5 +95,17 @@
   box-shadow: 0px 0px 30px #740B0B45;
   border-radius: 1rem;
 }
+.items_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  background-color: #E43636;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: #FFCA00;
+  padding: 1rem 2rem 1rem 10rem;
+  font-size: 30px;
+  font-weight: bold;
+}
 
 </style>

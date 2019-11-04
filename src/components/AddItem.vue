@@ -31,8 +31,10 @@
     name: 'addItem',
 
     methods: {
-      onCLick(title, taste, value) {
-        this.$store.commit('addFood', {title, taste, value})
+      onSubmit() {
+        const {title, flavor, value, description} = this
+        const image = this.image? this.image : defaultIMG
+        this.$store.commit('addFood', {title, flavor, value, description, image})
       },
       uploadImage(event) {
         const image = event.target.files[0]

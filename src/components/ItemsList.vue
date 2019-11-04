@@ -130,5 +130,13 @@
   font-size: 24px;
   color: #A03400;
 }
+.items_card_body p {
+  line-height: 3rem;
+  margin: 0;
+}
+.items_card_body p span {
+  font-weight: bold;
+  
+}
 
 </style>

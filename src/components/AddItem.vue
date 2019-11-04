@@ -128,7 +128,7 @@ input[type='file'] {
   position: relative;
   width: 100%;
   padding: 2rem;
-  margin-top: -3rem;
+  margin-top: -3.3rem;
   display: flex;
   flex-direction: column;
 

@@ -1,24 +1,24 @@
 # pastel-de-ideias
 
-## Project setup
+O seu pastel quantico de cada dia
+
+## Instale as dependências do projeto com
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Para rodar o ambiente de desenvolvimento use o comando
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Para buildar para produção
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Você pode rodar o linter manualmente se isso te apetece
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

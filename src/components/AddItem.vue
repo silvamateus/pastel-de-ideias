@@ -16,8 +16,12 @@
         </div>
         <textarea v-model="description" placeholder="Descrição" class="block_form_input--size-big"/>
         <label class="block_form_file block_form_input--size-big" for="img-upload">
-          <i class="far fa-image image-upload"></i>
+          <div v-if="this.image.length > 0">
+            <img :src="this.image" alt="imagem do item adicionado" class="loaded-image"/>
+          </div>
+          <i v-else class="far fa-image image-upload"></i>
           <p>Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar a pasta</p>
+          
         </label>
         <input type="file" id="img-upload" accept="image/jpg, image/png" @change="uploadImage($event)"/>
         <div class="block_form_buttons">
@@ -54,7 +58,7 @@
         const reader = new FileReader()
         reader.readAsDataURL(image)
         reader.onload = ev => {
-          this.image = ev.target.files[0]
+          this.image = ev.target.result
         }
       }
     },
@@ -89,10 +93,13 @@ input[type='file'] {
   display: none
 }
 .image-upload {
-  font-size: 4.5rem;
+  font-size: 7.5rem;
   color: #E43636;
 }
-
+.loaded-image {
+  width: 115px;
+  height: 115px;
+}
 .wrapper {
   position: relative;
   width: 100%;

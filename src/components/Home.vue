@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .gradient{
   position: relative;
-  min-height: 85vh;
+  min-height: 830px;
   width: 100%;
   background:linear-gradient(to right, transparent, #FFFFFF, transparent);
   overflow: hidden;
@@ -41,7 +41,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: calc(100% + 2px);
-  height: 60vh;
+  height: 500px;
   margin-left: -1px;
   margin-right: -1px;
 }

@@ -41,7 +41,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: calc(100% + 2px);
-  height: 500px;
+  height: 541px;
   margin-left: -1px;
   margin-right: -1px;
 }

@@ -67,7 +67,7 @@
   height: 5px;
   border-bottom: 1px solid #E43636;
   top: 0;
-  width: calc(100% + 7.6rem);
+  width: calc(100% + 3.6rem);
 }
 .items_lines span::before {
   right: 100%;
@@ -149,6 +149,28 @@
 }
 .items_card_body p span {
   font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+  .items_lines span::before, .items_lines span::after {
+    width: calc(100% - 12rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .items_lines span::before, .items_lines span::after {
+    width: 160px;
+  }
+  .items_card_block {
+    width: calc(100% - 8rem);
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .items_lines span::before, .items_lines span::after {
+    display: none;
+  }
 }
 
 </style>

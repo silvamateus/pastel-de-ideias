@@ -29,8 +29,9 @@ export default {
 .gradient{
   position: relative;
   min-height: 85vh;
-  width: 100vw;
+  width: 100%;
   background:linear-gradient(to right, transparent, #FFFFFF, transparent);
+  overflow: hidden;
 }
 .container {
   display: flex;
@@ -39,8 +40,10 @@ export default {
   background-size: cover;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: calc(100% + 2px);
   height: 60vh;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 .container_pasteis {
   width: 392.53px;

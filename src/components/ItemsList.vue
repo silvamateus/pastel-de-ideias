@@ -41,7 +41,7 @@
 <style scoped>
 .items {
   position: relative;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +67,7 @@
   height: 5px;
   border-bottom: 1px solid #E43636;
   top: 0;
-  width:calc(100vw/3 - 1.8rem);
+  width: calc(100% + 7.6rem);
 }
 .items_lines span::before {
   right: 100%;

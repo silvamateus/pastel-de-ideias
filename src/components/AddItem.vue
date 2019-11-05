@@ -268,4 +268,10 @@ input, textarea, .block_form_file {
   color: #A03400;
   margin-left: 1rem;
 }
+
+@media (max-width: 768px) {
+  .wrapper::after {
+    display: none;
+  }
+}
 </style>
